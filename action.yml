@@ -7,6 +7,8 @@ branding:
 runs:
   using: "node16"
   main: "./dist/index.js"
-outputs:
-  duplicates:
-    description: "An object of duplicated JSON keys by files, if found."
+inputs:
+  version:
+    description: "version of the tool to install"
+    required: false
+    default: "v1.2.2"

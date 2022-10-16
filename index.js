@@ -24,9 +24,11 @@ async function setup() {
 
     // Download the specific version of the tool, e.g. as a tarball
     const pathToTarball = await tc.downloadTool(getDownloadURL(version));
+    console.log(`Downloaded ${pathToTarball}`);
 
     // Extract the tarball onto the runner
     const pathToCLI = await tc.extractTar(pathToTarball);
+    console.log(`Extracted ${pathToCLI}`);
 
     // Expose the tool by adding it to the PATH
     core.addPath(pathToCLI)
