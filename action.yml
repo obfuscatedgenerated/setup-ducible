@@ -1,0 +1,12 @@
+name: "Setup ducible"
+description: "A GitHub action to setup the ducible CLI."
+author: "obfuscatedgenerated"
+branding:
+  icon: "download"
+  color: "white"
+runs:
+  using: "node16"
+  main: "./dist/index.js"
+outputs:
+  duplicates:
+    description: "An object of duplicated JSON keys by files, if found."
